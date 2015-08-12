@@ -10,12 +10,13 @@
             //Arrange
             $test_AnagramChecker = new AnagramChecker;
             $input = "dog";
+            $words = "god june gdo";
 
             //Act
-            $result = $test_AnagramChecker->makeAnagram($input);
+            $result = $test_AnagramChecker->makeAnagram($input, $words);
 
             //Assert
-            $this->assertEquals($input);
+            $this->assertEquals("god: IS, june: IS NOT, gdo: IS", $result);
         }
     }
  ?>
